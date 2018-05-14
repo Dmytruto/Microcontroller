@@ -22,7 +22,7 @@ This function creates a directory named faces which will be contain a sub folder
   CTD.create_directory(sub_directory_name)
 ```
 ### Exstracting face from the image
- In input this function has the image. And it returns grayscaling cropped face from this image.
+ In input this function has the image. if this image contains faces, function will returns grayscaling cropped face from this image.else it will return emty list.
  ```python
  CTD.face_extractor(img)
  ```
@@ -39,4 +39,4 @@ CTD.trainModel(file_name)
 
 
 
-<strong style="font-size: 1.1rem;"> !To create data set and trained model on this data you have to execute this functions in the same order that I have written on this article!</strong>
+<strong style="font-size: 1.1rem;"> !To create data set and trained model on this data you have to execute this functions in the same order that It had been written on this article!</strong>
