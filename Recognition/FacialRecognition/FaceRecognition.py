@@ -14,24 +14,10 @@ class Name_confidance:
         confidence = 0
 
 
-def face_detector(img):
-        # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        faces = face_classifier.detectMultiScale(img, 1.3, 5)
-        if faces is ():
-            return img, []
-
-        for (x, y, w, h) in faces:
-            cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 255), 2)
-            roi = img[y:y + h, x:x + w]
-            roi = cv2.resize(roi, (200, 200))
-            return img, roi
-
-
 def face_recognizer(img_to_recognize):
     frame = cv2.imread(img_to_recognize)
-    image, face = face_detector(frame)
     try:
-        face = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY)
+        face = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         min = 500
         results = model.predict(face)
         if results[1] < min:
