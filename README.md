@@ -35,6 +35,7 @@ This function create histograms from all images in subfolder and save this histo
  ```python
 CTD.trainModel(file_name)
 ```
+<strong style="font-size: 1.1rem;"> !To create data set and trained model on this data you have to execute this functions in the same order that It had been written on this article!</strong>
 ##Face Recognition
  ### Import FaceRecognition.py
  Import reconizer which have already trained on the Data Set.
@@ -47,4 +48,4 @@ In input this function takes human face image and compare it with faces which ha
 ```python 
   FR.face_recognizer(face_image)
 ```
-<strong style="font-size: 1.1rem;"> !To create data set and trained model on this data you have to execute this functions in the same order that It had been written on this article!</strong>
+<strong style="font-size: 1.1rem;">In order to use face recognizer firstly you need create data set and train model</strong>
