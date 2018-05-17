@@ -1,4 +1,3 @@
-
 ## Clone the Repository
  1. On GitHub, navigate to the main page of the repository https://github.com/Dmytruto/NormalSmartDevice.
  2. Click <strong> Clone or download. </strong>
@@ -36,7 +35,16 @@ This function create histograms from all images in subfolder and save this histo
  ```python
 CTD.trainModel(file_name)
 ```
+##Face Recognition
+ ### Import FaceRecognition.py
+ Import reconizer which have already trained on the Data Set.
+  ```python
+  import NormalSmartDevice.FacialRecognition.FaceRecognition as FR
+  ```
 
-
-
+### Run Recognizer
+In input this function takes human face image and compare it with faces which had been used to create DataSet. If face on the input image is similar to one of the faces in data set, function will return true, else false. 
+```python 
+  FR.face_recognizer(face_image)
+```
 <strong style="font-size: 1.1rem;"> !To create data set and trained model on this data you have to execute this functions in the same order that It had been written on this article!</strong>
