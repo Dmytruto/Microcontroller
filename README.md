@@ -1,4 +1,3 @@
-
 ## Clone the Repository
  1. On GitHub, navigate to the main page of the repository https://github.com/Dmytruto/NormalSmartDevice.
  2. Click <strong> Clone or download. </strong>
@@ -22,7 +21,7 @@ This function creates a directory named faces which will be contain a sub folder
   CTD.create_directory(sub_directory_name)
 ```
 ### Exstracting face from the image
- In input this function has the image. And it returns grayscaling cropped face from this image.
+ In input this function has the image. if this image contains faces, function will returns grayscaling cropped face from this image.else it will return emty list.
  ```python
  CTD.face_extractor(img)
  ```
@@ -36,7 +35,17 @@ This function create histograms from all images in subfolder and save this histo
  ```python
 CTD.trainModel(file_name)
 ```
+<strong style="font-size: 1.1rem;"> !To create data set and trained model on this data you have to execute this functions in the same order that It had been written on this article!</strong>
+##Face Recognition
+ ### Import FaceRecognition.py
+ Import reconizer which have already trained on the Data Set.
+  ```python
+  import NormalSmartDevice.FacialRecognition.FaceRecognition as FR
+  ```
 
-
-
-<strong style="font-size: 1.1rem;"> !To create data set and trained model on this data you have to execute this functions in the same order that I have written on this article!</strong>
+### Run Recognizer
+In input this function takes human face image and compare it with faces which had been used to create DataSet. If face on the input image is similar to one of the faces in data set, function will return true, else false. 
+```python 
+  FR.face_recognizer(face_image)
+```
+<strong style="font-size: 1.1rem;">In order to use face recognizer firstly you need create data set and train model</strong>
