@@ -39,7 +39,7 @@ def start_creating_data_set(quantity):
     cap.release()
     cv2.destroyAllWindows()
 
-def trainModel():
+def train_model():
     dirs = listdir('./faces/')
     Training_Data, Labels = [], []
     for dir_name in dirs:
@@ -52,5 +52,3 @@ def trainModel():
     model = cv2.face.LBPHFaceRecognizer_create()
     model.train(Training_Data, np.asarray(Labels))
     model.save('./TrainedFaces/DataBase.json')
-
-trainModel()
