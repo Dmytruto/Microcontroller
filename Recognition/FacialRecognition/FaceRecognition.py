@@ -35,5 +35,4 @@ def face_recognizer(img_to_recognize):
             return "Not allowed"
 
     except:
-        return "No face found"
-        pass
+        return "Not allowed"
