@@ -1,12 +1,8 @@
 ## Prerequisites
  1. Install python 3.6.
- 2. Install virtual environment.
- ```terminal
- $ pip install virtualenv
- ```
- 3. Create and activate your virtual environment in the <strong> Recognition </strong> folder, using following guide:
- https://virtualenv.pypa.io/en/stable/userguide/
- 4. Install the required modules:
+ 2. Install, create and activate your virtual environment in the <strong> Recognition </strong> folder, using following guide:
+https://virtualenv.pypa.io/en/stable/installation/
+ 3. Install the required modules:
  ```terminal
 Django==2.0.5
 djangorestframework==3.8.2
@@ -31,11 +27,12 @@ There are two possible ways how to run server in your computer:
 2. Go to <strong>File - Settings - Project - Project Interpreter</strong> and <strong> add local </strong> interpretener, choosing path to <strong> Scripts/python.exe </strong> in the folder with your virtual environment.
 3. Go to <strong>Run - Edit Configurations</strong> and <strong> add new </strong> configuration:
 ```
-  Name: Django Run Server
+  Name: Django Run Server 
+        (If there is already configuration with name 'Django Run Server', edit only 'Python interpreter')
   Script path: \your\path\to\Recognition\server\manage.py
   Parameters: runserver
   Python interpreter: *choose that, what you have created*
-```
+``` 
 4. Run 'Django Run Server'.
 
 
