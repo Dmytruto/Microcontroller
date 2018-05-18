@@ -49,7 +49,6 @@ Request shoud be sent to <strong>http://{host}:{port}/mapping/photo</strong>. If
  ```
 *name* allowed
 Not allowed
-No face found
 ```
 ### Example request and response
 ![response](response.png "Response example")
