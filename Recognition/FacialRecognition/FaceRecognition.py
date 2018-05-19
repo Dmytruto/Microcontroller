@@ -4,7 +4,6 @@ from os import listdir
 from server.info.settings import FACIAL_RECOGNITION_ROOT
 path = FACIAL_RECOGNITION_ROOT
 
-face_classifier = cv2.CascadeClassifier(path + '/haarcascade_frontalface_default.xml')
 model = cv2.face.LBPHFaceRecognizer_create()
 model.read(path + '/TrainedFaces/DataBase.json')
 
