@@ -12,11 +12,11 @@ Summary: This paper provides an overview of how Normal
 Smart Device users can set up the person identification smart system based on a Raspberry Pi 3, using this API.
 
 ### Getting Started with Normal Smart Device API
-* <a href="#1" style="font-size: 1rem;">Getting Started with Raspberry Pi</a>
+* <a href="#1" style="font-size: 1.1rem;">Getting Started with Raspberry Pi</a>
 1. <a href="#1.1">Creating RESTful client on the Raspberry</a>
 2. <a href="#1.2">Face detection</a>
 
-* <a href="#2" style="font-size: 1rem;">The server with recognition algorithm</a>
+* <a href="#2" style="font-size: 1.1rem;">The server with recognition algorithm</a>
 1. <a href="#2.1">Creating DataSet</a>
 2. <a href="#2.2">Face Recognition</a>
 3. <a href="#2.3">How to run the server?</a>
