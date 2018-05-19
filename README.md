@@ -49,24 +49,18 @@ $ pip install numpy
 ```
 * Install OpenCV by following <a href = "https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/">this guide</a> 
 
-* Install git
+* Install subversion
 ``` terminal
-$ sudo apt-get install git
+$ sudo apt-get install subversion
 ``` 
 
 
 <h2 id="1.1"> Creating RESTful client on the Raspberry </h2>
 
-1. Download folder with code from Github <a href = "https://github.com/Dmytruto/NormalSmartDevice">repository</a>.
+1. Download <strong> Device</strong> folder with code from Github <a href = "https://github.com/Dmytruto/NormalSmartDevice">repository</a>.
 ``` terminal
-$ cd
-$ mkdir NormalDir
-$ cd NormalDir
-$ git init
-$ git config core.sparsecheckout true
-$ echo Dmytruto/NormalSmartDevice/tree/InesaBranch/Device >> .git/info/sparse-checkout
-$ git remote add origin -f https://github.com/Dmytruto/NormalSmartDevice
-$ git pull origin master
+$ cd 
+$ svn checkout https://github.com/Dmytruto/NormalSmartDevice/trunk/Device
 ```
 2. Make program run at a startup:  
 * Open rc.local file:
@@ -75,14 +69,14 @@ $ sudo nano /etc/rc.local
 ``` 
 * Add the following line there
 ``` terminal
-sudo python /home/NormalDir/detection.py &
+sudo python /home/Device/detection.py &
 ```
 <h2 id="1.2"> Face detection  </h2>
 
 ### Import detection.py 
 You need to import module in a file you want to use it in
 ``` python
-import NormalDir.detection as FDR
+import Device.detection as FDR
 ```
 ### Image preprocessing
 ``` python
@@ -123,27 +117,25 @@ This section provides an information to help you succesfully set up a server, wh
 
 3. Install the required modules: 
 ```terminal 
-Django==2.0.5 
-djangorestframework==3.8.2
-opencv-python==3.4.0.12 
-opencv-contrib-python==3.4.0.12
+$ pip install django==2.0.5 
+$ pip install djangorestframework==3.8.2
+$ pip install opencv-python==3.4.0.12 
+$ pip install opencv-contrib-python==3.4.0.12
+$ sudo apt-get install subversion
 ```
 ### Clone the Repository
-1. Choose and go to the directory where you want the cloned directory to be made.(It must be the same folder where you want to use this project).
-2. Download <strong> Recognition </strong>folder with code from Github <a href = "https://github.com/Dmytruto/NormalSmartDevice">repository</a>.
+1. Download <strong> Recognition</strong> folder with code from Github <a href = "https://github.com/Dmytruto/NormalSmartDevice">repository</a>.
 ``` terminal
-$ git init
-$ git config core.sparsecheckout true
-$ echo Dmytruto/NormalSmartDevice/tree/InesaBranch/Recognition >> .git/info/sparse-checkout
-$ git remote add origin -f https://github.com/Dmytruto/NormalSmartDevice
-$ git pull origin master
+$ cd path/to/your/dir
+$ svn checkout https://github.com/Dmytruto/NormalSmartDevice/trunk/Recognition
 ```
+
 <h2 id="2.1"> Creating DataSet</h2>
 
  ### Import CreateTrainingDataAndTrainModel.py
  First of all you need to import our module in file where you want to use it.
   ```python
-  import NormalSmartDevice.FacialRecognition.CreateTrainingDataAndTrainModel as CTD
+  import Recognition.FacialRecognition.CreateTrainingDataAndTrainModel as CTD
   ```
 ### Next step
 This function creates a directory named faces which will be contain a sub folders with photo set. In input this function takes the directory name and creates the subfolder with inputted name. 
@@ -172,7 +164,7 @@ CTD.trainModel(file_name)
  ### Import FaceRecognition.py
  Import reconizer which have already trained on the Data Set.
   ```python
-  import NormalSmartDevice.FacialRecognition.FaceRecognition as FR
+  import Recognition.FacialRecognition.FaceRecognition as FR
   ```
 
 ### Run Recognizer
