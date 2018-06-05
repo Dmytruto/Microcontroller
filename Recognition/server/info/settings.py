@@ -125,3 +125,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'uploaded_image')
 MEDIA_URL = '/image/'
 
 FACIAL_RECOGNITION_ROOT = os.path.join(BASE_DIR, '..', 'FacialRecognition')
+
+

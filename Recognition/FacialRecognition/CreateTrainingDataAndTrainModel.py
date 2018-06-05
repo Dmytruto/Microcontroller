@@ -53,4 +53,7 @@ def trainModel():
     model.train(Training_Data, np.asarray(Labels))
     model.save('./TrainedFaces/DataBase.json')
 
+
+# create_directory(input())
+# start_creating_data_set(1000)
 trainModel()

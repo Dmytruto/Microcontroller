@@ -28,7 +28,7 @@ def face_recognizer(img_to_recognize):
         if min < 500:
             Name_confidance.confidence = int(100 * (1 - (min) / 400))
 
-        if Name_confidance.confidence > 75:
+        if Name_confidance.confidence > 85:
             return Name_confidance.person_name + " allowed"
         else:
             return "Not allowed"
