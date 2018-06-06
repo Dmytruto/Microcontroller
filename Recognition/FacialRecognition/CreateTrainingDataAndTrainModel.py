@@ -54,6 +54,6 @@ def trainModel():
     model.save('./TrainedFaces/DataBase.json')
 
 
-# create_directory(input())
-# start_creating_data_set(1000)
+create_directory(input())
+start_creating_data_set(1000)
 trainModel()
